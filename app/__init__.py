@@ -6,8 +6,8 @@ def create_fastapi_app() -> FastAPI:
 
     app = FastAPI()
 
-    @app.get("/")
+    @app.get("/ping")
     async def root():
-        return {"message": "Hello World"}
+        return {"message": "pong"}
     
     return app
