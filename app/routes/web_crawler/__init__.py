@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 
 web_crawler_router = APIRouter(
-    prefix="/webcrawler",
+    prefix="/web-crawler",
 )
 
 # Import items from current directory at the end of
