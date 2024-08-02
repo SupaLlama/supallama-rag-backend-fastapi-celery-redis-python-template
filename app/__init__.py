@@ -21,9 +21,13 @@ def create_fastapi_app() -> FastAPI:
     #  Call Celery Factory function *BEFORE* loading routes
     app.celery_app = create_celery()
 
-    # Load API routes
-    # from app.routes.llm import llm_router
-    # app.include_router(llm_router)
+    # Load LLM API route
+    from app.routes.llm import llm_router
+    app.include_router(llm_router)
+
+    # Load Web Crawler API route
+    from app.routes.web_crawler import web_crawler_router
+    app.include_router(web_crawler_router)
 
     @app.get("/ping")
     async def root():
