@@ -12,6 +12,8 @@ class BaseConfig:
 
     FIRECRAWL_API_KEY: str = os.environ.get("FIRECRAWL_API_KEY", "")
 
+    PINECONE_INDEX_NAME: str = os.environ.get("PINECONE_INDEX_NAME", "")
+
 
 class DevelopmentConfig(BaseConfig):
     pass
